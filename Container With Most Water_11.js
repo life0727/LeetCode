@@ -1,3 +1,5 @@
+//原题：https://leetcode.com/problems/container-with-most-water/
+
 // var maxArea = function(height) {
 //   let lang = height.length-1;
 //   let curArea = 0;
@@ -23,3 +25,4 @@ var maxArea = function(height) {
     }
     return max_area;
 };
+maxArea([2,3,4,5,18,17,6])
