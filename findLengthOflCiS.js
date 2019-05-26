@@ -14,4 +14,3 @@ var findLengthOfLCIS = function(nums) {
     if(nums.length == 0) res = 0
     return res
 };
-
