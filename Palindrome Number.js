@@ -1,6 +1,8 @@
 //原题9：https://leetcode.com/problems/palindrome-number/
 
-
+//如何判断几位数
+//根据几位数来算出每个位数的数
+//Math.trunc() 取整
 var isPalindrome = function(x) {
     if (x < 0) return false
 

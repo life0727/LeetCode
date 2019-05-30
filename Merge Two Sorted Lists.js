@@ -1,45 +1,23 @@
 //原题21：https://leetcode.com/problems/merge-two-sorted-lists/
+
+//深度递归遍历返回一个对象且变量都在一个函数中
+//生成嵌套json数据对象利用arr逐级保存（文超大神）。。
 var mergeTwoLists = function(l1,l2) {
-    
-    let res = {};
+    if (!l1) return l2;
+    if (!l2) return l1;
     function deepArr(obj,arr = []){
         arr.push(obj.val);
         if(obj.next == null)  return arr;
         arr = [...arr,...deepArr(obj.next)]
         return arr
+    };
+    const resArr = [...deepArr(l1),...deepArr(l2)].sort((a,b) => a-b);
+    const arr = [];
+    for(let i = resArr.length - 1;i >= 0 ;i--){
+       let obj = Object.assign({},{'val':resArr[i],'next':arr[0] || null})
+       arr.unshift(obj)
     }
-    const arr1 = deepArr(l1)
-    const arr2 = deepArr(l2)
-    const resArr = [...arr1,...arr2].sort((a,b) => a-b);
-
-    for(let i = 0;i < resArr.length;i++){
-        
-        // if(res.next != null || res.next == undefined ){
-        //     res.val = resArr[i];
-        //     console.log(res)
-        //     if(i == resArr.length - 1){
-        //         res.next = null;
-        //         break;
-        //     }
-    
-        //     res.next = next({},resArr[i + 1])
-        // }
-        //res.val = resArr[i];
-    }
-    // function next(obj,num){
-    //     console.log(obj)
-    //   obj.val = num;
-    //   obj.next = next({},num)
-    //   return obj
-    // }
-    
-    // function ListNode(val) {
-    //         this.val = val;
-    //         this.next = null;
-    //     }
-    console.log(resArr)
-    console.log(res)
-
+    return arr[0]
 };
 const l1 = {
     val: 1,

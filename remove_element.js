@@ -1,4 +1,6 @@
 //原题27：https://leetcode.com/problems/remove-element/submissions/
+
+//循环遍历过滤的时候 splice(i,1),i要--
 var removeElement = function(nums, val) {
     var n = 0;
     for (let i= 0; i < nums.length; i++) {
