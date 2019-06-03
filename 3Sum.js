@@ -8,7 +8,6 @@ var threeSum = function(nums) {
     let positiveArr = sortNums.filter(item => item > 0);
     let negativeArr = sortNums.filter(item => item < 0);
 
-    console.log(positiveArr)
     console.log(negativeArr)
     
 };
