@@ -10,6 +10,7 @@ var threeSum = function(nums) {
 
     console.log(negativeArr)
     
+    
 };
 
 const exp = [-1, 0, 1, 2, -1, -4]
