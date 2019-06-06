@@ -3,8 +3,8 @@
 var searchInsert = function(nums, target) {
     const num = [target,...nums];
     let sortNums = num.sort((a,b) => a - b);
-    let res = sortNums.indexOf(target);
-    console.log(res)
+    return res = sortNums.indexOf(target);
+
 };  
 
 searchInsert( [6,7,9,10],11)

@@ -14,6 +14,7 @@ var threeSum = function(nums) {
 };
 
 const exp = [-1, 0, 1, 2, -1, -4]
+
 threeSum(exp)
 
 // [6,7,9,10]
