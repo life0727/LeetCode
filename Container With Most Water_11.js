@@ -17,6 +17,7 @@
 // };
 // maxArea([2,3,4,5,18,17,6])
 
+
 var maxArea = function(height) {
     let max_area = 0, left = 0, right = height.length - 1;
     while (left < right) {
